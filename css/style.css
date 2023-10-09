@@ -22,6 +22,7 @@
 --primary-text-color: #0F0A0A;
 --secondary-text-color: #FCE517;
 --primary-background-color: #F5EFED;
+--secondary-background-color: #D9D3D1;
 
 --padding-section: 50px 100px;
 }
@@ -85,6 +86,16 @@ a:hover{
      text-decoration: underline;
 }
 
+.selected{
+     color: #D9D3D1;
+}
+
+.anchor-color:hover{
+     text-decoration: none;
+     color: var(--secondary-text-color);
+     
+}
+
 /*  */
 
 button{
@@ -129,6 +140,10 @@ nav .container-left{
      padding-inline-end: 100px;
 }
 
+nav .container{
+     cursor: pointer;
+}
+
 /* hero */
 
 .hero{
@@ -159,7 +174,7 @@ nav .container-left{
 
 .about{
      padding: var(--padding-section);
-     height: 500px;
+     margin: 50px 0;
 }
 
 .about .container{
@@ -168,6 +183,90 @@ nav .container-left{
      flex-flow: column;
      gap: 40px;
      justify-content: center;
+     line-height: 35px;
+}
+
+.about a{
+     font-weight: 700;
+}
+
+/* location */
+
+.location{
+     border-top: 3px dashed var(--primary-text-color);
+}
+
+.location > .container{
+     text-align: center;
+     padding: 30px 0;
+
+}
+
+.location iframe{
+     width: 100%;
+}
+
+/* ABOUT PAGE */
+
+/* about title */
+
+.about__title{
+     background: url('/assets/kitchen-about.jpg') 0 -250px no-repeat;
+     background-size: 1500px;
+     height: 600px;
+}
+
+.about__title .container{
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+}
+
+/* about content */
+
+.about__content{
+     display: flex;
+     margin: 100px 30px 0 30px;
+     padding-bottom: 100px;
+}
+
+.about__content .container{
+     flex: 2;
+     display: flex;
+     padding: 50px 100px;
+     gap: 20px;
+     flex-direction: column;
+
+}
+
+.about__content .container__img{
+     flex: 2;
+    
+}
+
+.container__img-us{
+     background: url('/assets/chef-about.jpg') 0 -30px no-repeat;
+     background-size: cover;
+     transform: rotateZ(3deg);
+     border: 10px dashed var(--secondary-text-color);
+
+}
+
+.container__img-mission{
+     background: url('/assets/eating-about.jpg')  no-repeat;
+     background-size: cover;
+     transform: rotateZ(-4deg);
+     border: 10px dashed var(--secondary-text-color);
+
+
+
+}
+
+.about__menu{
+     display: flex;
+     justify-content: center;
+     margin-bottom: 40px;
 }
 
 /******************************************
