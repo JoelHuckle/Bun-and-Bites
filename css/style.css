@@ -27,6 +27,13 @@
 --padding-section: 50px 100px;
 }
 
+@media screen and (max-width: 700px) {
+     :root{
+          --padding-section: 50px 20px;
+     }
+     
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
      width: 8px; 
@@ -73,6 +80,32 @@ p{
      font-weight: 200;
 }
 
+@media screen and (max-width: 800px){
+     h1{
+          font-size: 6rem;
+     }
+
+     p{
+          font-size: 2rem;
+     }
+} 
+
+@media screen and (max-width: 700px){
+     h1{
+          font-size: 4rem;
+     }
+
+     h2{
+          font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 400px){
+     p{
+          font-size: 1.5rem;
+     }
+}
+
 span{
      color: white;
 }
@@ -96,7 +129,9 @@ a:hover{
      
 }
 
-/*  */
+
+
+/* buttons */
 
 button{
      border: 3px solid black;
@@ -116,6 +151,13 @@ button:hover{
      transform: rotateZ(-3deg);
 }
 
+@media screen and (max-width: 400px){
+     button{
+          font-size: 1.2rem;
+     }
+
+}
+
 
 /******************************************
 /* LAYOUT
@@ -125,6 +167,12 @@ button:hover{
      padding-inline: 20px;
      position: relative;
      z-index: 1;
+}
+
+@media screen and (max-width: 800px){
+     .container{
+          padding-inline: none;
+     }
 }
 
 nav{
@@ -144,13 +192,21 @@ nav .container{
      cursor: pointer;
 }
 
+@media screen and (max-width: 750px){
+     nav .container-left{
+          display: none;
+     }
+}
+
+
 /* hero */
 
 .hero{
      background: url('/assets/burger-hero.jpg') 0 -200px no-repeat;
-     background-size: 1500px;
-     height: 700px;
+     background-size: cover;
+     background-position: center;
      position: relative;
+     padding: 50px 0;
 }
 
 .hero::before{
@@ -172,10 +228,13 @@ nav .container{
 
 /* about */
 
+
+
 .about{
      padding: var(--padding-section);
      margin: 50px 0;
 }
+
 
 .about .container{
      text-align: center;
@@ -186,8 +245,29 @@ nav .container{
      line-height: 35px;
 }
 
+
+
 .about a{
      font-weight: 700;
+}
+
+.about__btn-start{
+     display: none;
+}
+
+@media screen and (max-width: 700px){
+     .about{
+          margin: 0;
+     }
+
+     .about__btn-end{
+          display: none;
+     }
+
+     .about__btn-start{
+          display: inline-block;
+     }
+
 }
 
 /* location */
@@ -214,6 +294,12 @@ nav .container{
      background: url('/assets/kitchen-about.jpg') 0 -250px no-repeat;
      background-size: 1500px;
      height: 600px;
+}
+
+@media screen and (min-width: 1480px){
+     .about__title{
+          background-size: cover;
+     }
 }
 
 .about__title .container{
@@ -260,13 +346,37 @@ nav .container{
      border: 10px dashed var(--secondary-text-color);
 
 
-
 }
 
 .about__menu{
      display: flex;
      justify-content: center;
      margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1000px){
+     .about__content{
+          display: flex;
+          flex-direction: column;
+     }
+     .container__img-mission{
+          order: 2;
+     }
+
+     .container__img{
+          width: 500px;
+          height: 500px;
+     }
+     
+}
+
+@media screen and (max-width: 600px){
+     .about__content .container{
+          padding: 50px 5px;
+          gap: 10px;
+          width: 100%;
+     
+     }
 }
 
 /******************************************
