@@ -75,9 +75,39 @@ h2{
      font-weight: 700;
 }
 
+h3{
+     font-size: 1.8rem;
+     font-weight: 400;
+     margin: 5% 0;
+     letter-spacing: 2px;
+}
+
 p{
      font-size: 1.5rem;
      font-weight: 200;
+}
+
+span{
+     color: white;
+}
+
+a{
+     text-decoration: none;
+     color: var(--primary-text-color);
+}
+
+a:hover{
+     text-decoration: underline;
+}
+
+.selected{
+     color: #D9D3D1;
+}
+
+.anchor-color:hover{
+     text-decoration: none;
+     color: var(--secondary-text-color);
+     
 }
 
 @media screen and (max-width: 800px){
@@ -106,29 +136,6 @@ p{
      }
 }
 
-span{
-     color: white;
-}
-
-a{
-     text-decoration: none;
-     color: var(--primary-text-color);
-}
-
-a:hover{
-     text-decoration: underline;
-}
-
-.selected{
-     color: #D9D3D1;
-}
-
-.anchor-color:hover{
-     text-decoration: none;
-     color: var(--secondary-text-color);
-     
-}
-
 
 
 /* buttons */
@@ -136,7 +143,6 @@ a:hover{
 button{
      border: 3px solid black;
      width: fit-content;
-     margin: 0 auto;
      cursor: pointer;
      font-size: 2rem;
      font-weight: bold;
@@ -151,9 +157,15 @@ button:hover{
      transform: rotateZ(-3deg);
 }
 
+.btn--secondary:hover{
+     transform: rotateZ(3deg);
+
+}
+
 @media screen and (max-width: 400px){
      button{
           font-size: 1.2rem;
+          margin: 0 auto;
      }
 
 }
@@ -172,6 +184,8 @@ button:hover{
 @media screen and (max-width: 800px){
      .container{
           padding-inline: none;
+          margin: 0;
+          padding: 0 10px;
      }
 }
 
@@ -238,8 +252,6 @@ nav .container{
 
 /* about */
 
-
-
 .about{
      padding: var(--padding-section);
      margin: 50px 0;
@@ -256,13 +268,18 @@ nav .container{
 }
 
 
-
 .about a{
      font-weight: 700;
 }
 
 .about__btn-start{
      display: none;
+}
+
+.container__btn{
+     display: flex;
+     justify-content: center;
+     gap: 50px;
 }
 
 @media screen and (max-width: 700px){
@@ -282,10 +299,6 @@ nav .container{
 
 /* location */
 
-.location{
-     border-top: 3px dashed var(--primary-text-color);
-}
-
 .location > .container{
      text-align: center;
      padding: 30px 0;
@@ -300,19 +313,19 @@ nav .container{
 
 /* about title */
 
-.about__title{
+.section__title{
      background: url('/assets/kitchen-about.jpg') 0 -250px no-repeat;
      background-size: 1500px;
-     height: 600px;
+     height: 50vh;
 }
 
 @media screen and (min-width: 1480px){
-     .about__title{
+     .section__title{
           background-size: cover;
      }
 }
 
-.about__title .container{
+.section__title .container{
      display: flex; 
      justify-content: center;
      align-items: center;
@@ -323,8 +336,7 @@ nav .container{
 
 .about__content{
      display: flex;
-     margin: 100px 30px 0 30px;
-     padding-bottom: 100px;
+     margin: 80px 30px;
 }
 
 .about__content .container{
@@ -386,6 +398,48 @@ nav .container{
           gap: 10px;
           width: 100%;
      
+     }
+}
+
+/* contact page */
+
+.contact{
+     display: flex;
+     margin-top: 5%;
+     justify-content: center;
+     margin: 50px 8%;
+}
+
+.contact > .container{
+     width: 50%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 10px;
+}
+
+.contact iframe{
+     height: 70vh;
+     align-self: center;
+
+}
+
+.nav__contact{
+     padding-right: 10px;
+}
+
+@media screen and (max-width: 1050px){
+     .contact{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 50px;
+          margin: 50px 0;
+     }
+
+     .contact .container{
+          width: 100%;
      }
 }
 
