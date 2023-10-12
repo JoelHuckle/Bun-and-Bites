@@ -317,6 +317,18 @@ nav .container{
      background: url('/assets/kitchen-about.jpg') 0 -250px no-repeat;
      background-size: 1500px;
      height: 50vh;
+     text-align: center;
+     background-position: center;
+}
+
+.section__title .container{
+     display: flex;
+     flex-direction: column;
+     gap: 50px;
+}
+
+.title--full{
+     height: 86.25vh;
 }
 
 @media screen and (min-width: 1480px){
@@ -380,16 +392,35 @@ nav .container{
           order: 2;
      }
 
-     .container__img{
+     /* .container__img{
           width: 500px;
           height: 500px;
      }
-     
+      */
      .about__content .container__img{
           flex: 2;
           border: 5px dashed var(--secondary-text-color);
+          flex-basis: 300px;
      }
-     
+}
+
+@media screen and (max-width: 450px){
+     .about__content .container__img{
+          flex: 2;
+          border: 5px dashed var(--secondary-text-color);
+          flex-basis: 300px;
+          background-position: -80px 0;
+     }
+
+}
+
+@media screen and (min-width: 1800px){
+     .about__content .container__img{
+          flex: 1;
+          border: 10px dashed var(--secondary-text-color);
+          height: 400px;
+     }
+
 }
 
 @media screen and (max-width: 600px){
@@ -425,7 +456,7 @@ nav .container{
 
 }
 
-.nav__contact{
+.nav--no-sidebar{
      padding-right: 10px;
 }
 
